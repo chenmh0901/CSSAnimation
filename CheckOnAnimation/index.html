@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckOnAnimation</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h2{
+      font-family: Helvetica;
+      font-size: 36px;
+      margin-top: 40px;
+      color: #333;
+      opacity: 0;
+      transition: opacity 2s 4s;
+    }
+    h2.visible{
+      opacity: 1;
+    }
+    .circle{
+      stroke-dasharray: 1194;// 1194
+      stroke-dashoffset: 1194;
+      opacity: 0;
+    }
+    
+    .stick{
+      stroke-dasharray: 350;// 350
+      stroke-dashoffset: 350;
+      opacity: 0;
+    }
+    
+    .circle.animate{
+      animation: circle 2s forwards, show 0.1s forwards;
+    }
+    .stick.animate{
+      animation: stick 2s forwards 2s, show 0.1s forwards 2s;
+    }
+    @keyframes circle {
+      0% {
+        stroke-dashoffset: 1194;
+      }
+      100%{
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes stick {
+      0% {
+        stroke-dashoffset: 350;
+      }
+      100%{
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes show {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  </style>
+</head>
+<body>
+  <input type="checkbox" style="margin: 10px 0;"/>
+  <svg width="400" height="400">
+    <circle fill="none" stroke="#68E534" stroke-width="20"
+     cy="200" cx="200" r="190" class="circle" stroke-linecap="round"
+     />
+     <polyline fill="none" stroke="#68E534" stroke-width="24" 
+     points="88,214 173,284 304,138" stroke-linecap="round" 
+     stroke-linejoin="round" class="stick"/>
+  </svg>
+  <h2>支付成功</h2>
+  <script>
+    const checkbox = document.querySelector('input');
+    
+    checkbox.addEventListener('click', function(){
+      const circle = document.querySelector('.circle');
+      const stick = document.querySelector('.stick');
+      const h2 = document.querySelector('h2');
+
+      if(this.checked){
+        document.querySelector('.circle').classList.add('animate');
+        document.querySelector('.stick').classList.add('animate');
+        document.querySelector('h2').classList.add('visible');
+      }else{
+        circle.classList.remove('animate');
+        stick.classList.remove('animate');
+        h2.style.transitionDelay = '0s'; 
+        h2.classList.remove('visible');
+        circle.style.opacity = 0;
+        stick.style.opacity = 0;
+        h2.style.opacity = 0;
+      }
+    });
+  </script>
+</body>
+</html>
