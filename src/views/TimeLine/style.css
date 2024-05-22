@@ -1,0 +1,30 @@
+.timeline__container{
+  width: 100%;
+  height: 60%;
+  box-sizing:border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.p{
+  margin: 10px 0;
+}
+
+.img{
+  margin:24px 0;
+  animation: reveal linear;
+  animation-timeline: view(block);
+  animation-range: entry 0% cover 50%;
+  width: 100%;
+}
+
+@keyframes reveal {
+  0%{
+    opacity: 0;
+    scale: 5;
+  }
+  100%{
+    opacity: 1;
+    scale: 1;
+  }
+}

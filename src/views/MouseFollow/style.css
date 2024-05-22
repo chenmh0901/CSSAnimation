@@ -1,0 +1,52 @@
+.mousebox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: #222;
+  gap: 50px;
+}
+.a{
+  position: relative;
+  padding: 20px 60px;
+  background-color: rgba(45, 45, 45, 1);
+  border-radius: 50px;
+  color: #999;
+  text-decoration: none;
+  font-size: 1.5rem;
+  user-select: none;
+  overflow: hidden;
+}
+.a .aspan{
+  position: relative;
+  z-index: 2;
+  letter-spacing: .2em;
+}
+.a:hover{
+  color: var(--clr);
+  text-shadow: 0 0 15px var(--clr),
+              0 0 40px var(--clr);
+}
+.a:hover::before{
+  opacity: 1;
+}
+.a::before{
+  content: '';
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: var(--y);
+  left: var(--x);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(var(--clr),transparent,transparent);
+  transition: 0.5s,top 0s,left 0s;
+  opacity: 0;
+}
+.a::after{
+  content: '';
+  background-color: rgba(45, 45, 45, .8);
+  position: absolute;
+  inset: 2px;
+  border-radius: 48px;
+}

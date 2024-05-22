@@ -1,0 +1,44 @@
+.waterlight__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #333;
+  overflow: hidden;
+}
+.box {
+  position: relative;
+  background-color: #fff;
+  padding: 15vmin 10vmin;
+  border-radius: 5vmin;
+  color: #66ddf7;
+  font-size: 8vmin;
+  overflow: hidden;
+  z-index: 0; 
+  height: 50%;
+}
+.box::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  background-color: #22292f;
+  background-image: conic-gradient(transparent, #66ddf7, transparent 30%);
+  z-index: -2;
+  animation: rotate 5s linear infinite;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 1vmin;
+  border-radius: 5vmin;
+  background-color: #000;
+  z-index: -1; 
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

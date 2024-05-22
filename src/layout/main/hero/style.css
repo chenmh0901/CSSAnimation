@@ -1,0 +1,16 @@
+.card-hero{
+  @apply w-full rounded-xl p-5;
+  background:linear-gradient(90deg, #d8e8ff 0% , #f9deff 100%);
+}
+
+.card-hero h3{
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.card-hero ._content{
+  @apply mt-[10px];
+}
+
+.card-hero ._content p{
+  @apply text-gray-500 ;
+}

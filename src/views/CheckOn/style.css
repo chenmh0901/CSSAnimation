@@ -1,0 +1,56 @@
+.checkonbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.h2{
+  font-family: Helvetica;
+  font-size: 36px;
+  margin-top: 40px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 2s 4s;
+}
+.h2.visible{
+  opacity: 1;
+}
+.circle{
+  stroke-dasharray: 1194;
+  stroke-dashoffset: 1194;
+  opacity: 0;
+}
+
+.stick{
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  opacity: 0;
+}
+
+.circle.animate{
+  animation: circle 2s forwards, show 0.1s forwards;
+}
+.stick.animate{
+  animation: stick 2s forwards 2s, show 0.1s forwards 2s;
+}
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 1194;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stick {
+  0% {
+    stroke-dashoffset: 350;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes show {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}

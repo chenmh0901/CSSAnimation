@@ -1,0 +1,8 @@
+.main{
+ @apply p-[20px] w-full mx-auto max-w-[1200px];
+}
+
+.content__list{
+ @apply flex flex-1 flex-col items-center gap-4
+}
+
