@@ -15,7 +15,7 @@
   font-size: 8vmin;
   overflow: hidden;
   z-index: 0; 
-  height: 50%;
+  height: 60%;
 }
 .waterlight__box::before {
   content: '';

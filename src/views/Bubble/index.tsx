@@ -6,9 +6,9 @@ export default function BubbleAnimation() {
   return (
     <div className="bubblecontainer">
       <div className="bubbles">
-        {bubbles.map(i => (
+        {bubbles.map((value, index) => (
           // @ts-expect-error TypeScript does not allow custom CSS variables in style attribute, but it's valid in this case.
-          <span key={i} style={{ '--i': i }} className="bspan"></span>
+          <span key={index} style={{ '--i': value }} className="bspan"></span>
         ))}
       </div>
     </div>
