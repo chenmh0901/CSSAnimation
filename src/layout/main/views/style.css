@@ -1,0 +1,4 @@
+.views{
+  @apply flex flex-col justify-center items-center rounded-2xl flex-grow;
+  background-color: #2f363e;
+}

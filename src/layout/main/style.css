@@ -1,8 +1,11 @@
 .main{
- @apply p-[20px] w-full mx-auto max-w-[1200px];
+ @apply p-[20px] w-full mx-auto max-w-[1200px] h-[90vh];
 }
 
 .content__list{
- @apply flex flex-1 flex-col items-center gap-4
+ @apply flex flex-1 flex-col items-center gap-4;
 }
 
+.content__views{
+  @apply flex flex-col h-[90vh];
+}
