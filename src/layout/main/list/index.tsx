@@ -1,8 +1,9 @@
+import type { IView } from '@/types/type'
 import { ViewType } from '@/types/type'
 import Card from '@/components/card'
 import './style.css'
 
-function List({ onViewClick }: { onViewClick: (arg: { label: string, value: ViewType }) => void }) {
+function List({ onViewClick }: { onViewClick: (view: IView) => void }) {
   return (
     <div className="list">
       <Card title="ClockAnimation" content="这是一个酷炫的闹钟展示动画" onClick={() => onViewClick({ label: 'Clock', value: ViewType.Clock })} />
