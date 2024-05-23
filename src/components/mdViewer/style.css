@@ -1,0 +1,7 @@
+.markdown-body ol li {
+  list-style-type: disc;
+}
+
+.markdown-body {
+  padding: 20px;
+}

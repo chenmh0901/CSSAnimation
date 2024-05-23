@@ -1,4 +1,3 @@
-import Box from '@/components/box'
 import './style.css'
 
 export default function MouseFollowAnimation() {
@@ -10,10 +9,10 @@ export default function MouseFollowAnimation() {
   }
 
   return (
-    <Box>
+    <>
       <a className="a" href="#" style={{ '--clr': '#0f0' } as React.CSSProperties} onMouseMove={e => handleMouseMove(e, e.target as HTMLAnchorElement)}><span className="aspan">Button</span></a>
       <a className="a" href="#" style={{ '--clr': '#ff0' } as React.CSSProperties} onMouseMove={e => handleMouseMove(e, e.target as HTMLAnchorElement)}><span className="aspan">Button</span></a>
       <a className="a" href="#" style={{ '--clr': '#f0f' } as React.CSSProperties} onMouseMove={e => handleMouseMove(e, e.target as HTMLAnchorElement)}><span className="aspan">Button</span></a>
-    </Box>
+    </>
   )
 }

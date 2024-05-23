@@ -1,5 +1,5 @@
 .card-hero{
-  @apply w-full rounded-xl p-5;
+  @apply w-full rounded-xl p-5 max-h-[40vh];
   background:linear-gradient(90deg, #d8e8ff 0% , #f9deff 100%);
 }
 

@@ -1,5 +1,6 @@
 import type { IView } from '@/types/type'
 import { ViewType } from '@/types/type'
+import './style.css'
 
 function header({ setActiveView }: { setActiveView: (view: IView) => void }) {
   return (

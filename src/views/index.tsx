@@ -8,6 +8,7 @@ import TimeLineAniamtion from './TimeLine'
 import WaterLightAnimation from './WaterLight'
 import type { IView } from '@/types/type'
 import { ViewType } from '@/types/type'
+import './style.css'
 
 export default function Views({ activeView }: { activeView: IView }) {
   return (

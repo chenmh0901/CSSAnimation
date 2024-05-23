@@ -2,6 +2,7 @@ import type { IView } from '@/types/type'
 import { ViewType } from '@/types/type'
 import Card from '@/components/card'
 import './style.css'
+import MarkdownViewer from '@/components/mdViewer'
 
 function List({ onViewClick }: { onViewClick: (view: IView) => void }) {
   return (
@@ -14,6 +15,7 @@ function List({ onViewClick }: { onViewClick: (view: IView) => void }) {
       <Card title="BubbleAnimation" content="这是一个好看的气泡背景动画" onClick={() => onViewClick({ label: 'Bubble', value: ViewType.Bubble })} />
       <Card title="TimeLineAnimation" content="这是一个CSSTimeLine动画" onClick={() => onViewClick({ label: 'TimeLine', value: ViewType.TimeLine })} />
       <Card title="WaterLightAnimation" content="这是一个好看的流水灯动画" onClick={() => onViewClick({ label: 'WaterLight', value: ViewType.WaterLight })} />
+      <MarkdownViewer />
     </div>
   )
 }

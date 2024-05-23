@@ -15,9 +15,7 @@ function Content({ activeView, setActiveView }: { activeView: IView, setActiveVi
     )
   }
   return (
-    <div className="content__views">
-      <Views activeView={activeView} />
-    </div>
+    <Views activeView={activeView} />
   )
 }
 

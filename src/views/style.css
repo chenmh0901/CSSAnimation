@@ -1,3 +1,4 @@
 .views{
-  @apply w-full;
+  @apply flex flex-col justify-center items-center h-[90vh] rounded-2xl;
+  background-color: #2f363e;
 }
