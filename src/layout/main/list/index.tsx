@@ -1,5 +1,5 @@
 import { ViewType } from "@/types/type"
-import Card from "./card"
+import Card from "@/components/card"
 import "./style.css"
 function List({onViewClick}: {onViewClick: (arg: {label: string, value: ViewType}) => void}) {
   return (
