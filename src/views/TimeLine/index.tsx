@@ -4,7 +4,7 @@ import './style.css'
 export default function TimeLineAniamtion() {
   return (
     <div className="timeline__container">
-      <h1>
+      <h1 className="title">
         《死亡诗社》经典台词
       </h1>
       <div className="p">
@@ -127,12 +127,6 @@ export default function TimeLineAniamtion() {
         <h2>
           三、要敢于开拓自己的天地
         </h2>
-        <p>
-          语言的目的只有一个：交流(学生)追求女人(老师)
-        </p>
-        <p>
-          language was developed for one endeavor, and that is?
-        </p>
         <p>
           To communicate...No,to woo women。
         </p>

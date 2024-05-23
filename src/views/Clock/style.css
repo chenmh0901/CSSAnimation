@@ -1,16 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-#box{
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2f363e;
-  height: 90vh;
-  width: 100%;
-  border-radius: 10px;
-}
-
 #clock{
   position: relative;
   display: flex;

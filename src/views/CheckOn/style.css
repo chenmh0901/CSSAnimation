@@ -1,15 +1,8 @@
-.checkonbox{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
 .h2{
   font-family: Helvetica;
   font-size: 36px;
   margin-top: 40px;
-  color: #333;
+  color: #f3f3f3;
   opacity: 0;
   transition: opacity 2s 4s;
 }

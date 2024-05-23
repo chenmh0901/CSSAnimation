@@ -4,8 +4,8 @@ function Card({ title, content, onClick }: { title: string, content: string, onC
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{content}</p>
-        <div className="card-actions justify-end" onClick={onClick}>
-          <button className="btn btn-primary">查看</button>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary" onClick={onClick}>查看</button>
         </div>
       </div>
     </div>

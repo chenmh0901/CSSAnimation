@@ -1,13 +1,12 @@
+import Box from '@/components/box'
 import './style.css'
 
-function WaterLightAnimation() {
+export default function WaterLightAnimation() {
   return (
-    <div className="waterlight__container">
-      <div className="box">
+    <Box>
+      <div className="waterlight__box">
         流水灯动画
       </div>
-    </div>
+    </Box>
   )
 }
-
-export default WaterLightAnimation

@@ -6,7 +6,7 @@
   background-color: #333;
   overflow: hidden;
 }
-.box {
+.waterlight__box {
   position: relative;
   background-color: #fff;
   padding: 15vmin 10vmin;
@@ -17,7 +17,7 @@
   z-index: 0; 
   height: 50%;
 }
-.box::before {
+.waterlight__box::before {
   content: '';
   width: 200%;
   height: 200%;
@@ -29,7 +29,7 @@
   z-index: -2;
   animation: rotate 5s linear infinite;
 }
-.box::after {
+.waterlight__box::after {
   content: '';
   position: absolute;
   inset: 1vmin;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './style.css'
+import Box from '@/components/box'
 
 function ClockAnimation() {
   const [time, setTime] = useState({
@@ -44,7 +45,7 @@ function ClockAnimation() {
   }
 
   return (
-    <div id="box">
+    <Box>
       <div id="clock">
         <div id="hrDots" style={{ '--clr': '#ff2972' } as React.CSSProperties}>
           {renderDots(12, time.hr, 30)}
@@ -72,7 +73,7 @@ function ClockAnimation() {
           </h2>
         </div>
       </div>
-    </div>
+    </Box>
   )
 }
 

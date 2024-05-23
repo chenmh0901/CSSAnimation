@@ -1,19 +1,18 @@
-import './style.css' // 假设你已经将CSS代码保存在styles.css文件中
+import Box from '@/components/box'
+import './style.css'
 
 const cards = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
 
-function CardAnimation() {
+export default function CardAnimation() {
   return (
-    <div className="box">
-      <div className="container">
+    <Box>
+      <div className="card__container">
         {cards.map((i, index) => (
-          <div className="card" style={{ '--i': i }} key={index}>
+          <div className="card" style={{ '--i': `${i}` } as React.CSSProperties} key={index}>
             {index + 1}
           </div>
         ))}
       </div>
-    </div>
+    </Box>
   )
 }
-
-export default CardAnimation

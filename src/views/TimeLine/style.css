@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.title{
+  @apply mx-auto
+}
 .p{
   margin: 10px 0;
 }
