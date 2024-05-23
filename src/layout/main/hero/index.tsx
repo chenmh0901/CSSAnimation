@@ -1,5 +1,6 @@
-import "./style.css"
-function CardHero(){
+import './style.css'
+
+function CardHero() {
   return (
     <div className="card-hero">
       <h3>Pet Animations</h3>

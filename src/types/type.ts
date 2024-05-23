@@ -1,51 +1,51 @@
 export enum ViewType {
-  List = "List",
-  Clock = "Clock",
-  Image = "Image",
-  Card = "Card",
-  CheckOn = "CheckOn",
-  Bubble = "Bubble",
-  MouseFollow = "MouseFollow",
-  TimeLine = "TimeLine",
-  WaterLight = "WaterLight",
+  List = 'List',
+  Clock = 'Clock',
+  Image = 'Image',
+  Card = 'Card',
+  CheckOn = 'CheckOn',
+  Bubble = 'Bubble',
+  MouseFollow = 'MouseFollow',
+  TimeLine = 'TimeLine',
+  WaterLight = 'WaterLight',
 }
 
 export interface IView {
-  label: string;
-  value: ViewType;
+  label: string
+  value: ViewType
 }
 
 export const viewList: IView[] = [
   {
-    label: "List",
+    label: 'List',
     value: ViewType.List,
   },
   {
-    label: "Clock",
+    label: 'Clock',
     value: ViewType.Clock,
   },
   {
-    label: "Card",
-    value: ViewType.Card
+    label: 'Card',
+    value: ViewType.Card,
   },
   {
-    label: "CheckOn",
+    label: 'CheckOn',
     value: ViewType.CheckOn,
   },
   {
-    label: "Bubble",
+    label: 'Bubble',
     value: ViewType.Bubble,
   },
   {
-    label: "MouseFollow",
+    label: 'MouseFollow',
     value: ViewType.MouseFollow,
   },
   {
-    label: "TimeLine",
+    label: 'TimeLine',
     value: ViewType.TimeLine,
   },
   {
-    label: "WaterLight",
+    label: 'WaterLight',
     value: ViewType.WaterLight,
-  }
+  },
 ]

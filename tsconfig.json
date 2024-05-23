@@ -8,9 +8,15 @@
       "DOM.Iterable"
     ],
     "useDefineForClassFields": true,
+    "baseUrl": ".",
     "module": "ESNext",
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     /* Linting */
@@ -20,13 +26,7 @@
     "noUnusedParameters": true,
     "noEmit": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+    "skipLibCheck": true
   },
   "references": [
     {

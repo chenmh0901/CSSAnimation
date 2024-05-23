@@ -1,13 +1,13 @@
-import './style.css';
+import './style.css'
 
 function WaterLightAnimation() {
-    return (
-      <div className='waterlight__container'>
-        <div className="box">
-          流水灯动画
-        </div>
+  return (
+    <div className="waterlight__container">
+      <div className="box">
+        流水灯动画
       </div>
-    );
+    </div>
+  )
 }
 
-export default WaterLightAnimation;
+export default WaterLightAnimation

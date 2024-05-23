@@ -1,29 +1,29 @@
-import CardHero from "./hero"
-import List from "./list"
-import Views from "@/views/index"
-import "./style.css"
-import { ViewType } from "@/types/type"
+import CardHero from './hero'
+import List from './list'
+import Views from '@/views/index'
+import './style.css'
+import { ViewType } from '@/types/type'
 
-function Content({activeView,setActiveView}){
-  if(activeView.value===ViewType.List){
+function Content({ activeView, setActiveView }) {
+  if (activeView.value === ViewType.List) {
     return (
       <div className="content__list">
         <CardHero />
-        <List onViewClick={setActiveView}/>
+        <List onViewClick={setActiveView} />
       </div>
-      )
+    )
   }
   return (
     <div className="content__views">
-      <Views activeView={activeView}/>
+      <Views activeView={activeView} />
     </div>
   )
 }
 
-export default function Main({activeView,setActiveView}){
+export default function Main({ activeView, setActiveView }) {
   return (
     <div className="main">
-      <Content activeView={activeView} setActiveView={setActiveView}/>
+      <Content activeView={activeView} setActiveView={setActiveView} />
     </div>
   )
 }

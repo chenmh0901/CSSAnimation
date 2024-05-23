@@ -1,6 +1,6 @@
-function Card({title, content, onClick}: {title: string, content: string, onClick: () => void}){
+function Card({ title, content, onClick }: { title: string, content: string, onClick: () => void }) {
   return (
-    <div className="card w-full bg-primary text-primary-content" >
+    <div className="card w-full bg-primary text-primary-content">
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{content}</p>
@@ -12,5 +12,3 @@ function Card({title, content, onClick}: {title: string, content: string, onClic
   )
 }
 export default Card
-
-
