@@ -9,9 +9,12 @@ export default function MarkdownViewer({ label }: { label: string }) {
 
   useEffect(() => {
     const path = `../../../notes/${label}.md`
-    fetch(path)
-      .then(res => res.text())
-      .then(text => setPost(text))
+    // fetch(path)
+    //   .then(res => res.text())
+    //   .then(text => setPost(text))
+    import(path).then((res) => {
+      setPost(res.default)
+    })
   }, [])
   return (
     <div className="card-hero">
