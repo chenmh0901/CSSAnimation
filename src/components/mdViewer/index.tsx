@@ -8,7 +8,7 @@ export default function MarkdownViewer({ label }: { label: string }) {
   const [post, setPost] = useState('')
 
   useEffect(() => {
-    const path = `./notes/${label}.md`
+    const path = `../../../notes/${label}.md`
     fetch(path)
       .then(res => res.text())
       .then(text => setPost(text))
