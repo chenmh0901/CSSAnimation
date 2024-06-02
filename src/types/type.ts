@@ -8,6 +8,7 @@ export enum ViewType {
   MouseFollow = 'MouseFollow',
   TimeLine = 'TimeLine',
   WaterLight = 'WaterLight',
+  BugWord = 'BugWord',
 }
 
 export interface IView {
@@ -47,5 +48,9 @@ export const viewList: IView[] = [
   {
     label: 'WaterLight',
     value: ViewType.WaterLight,
+  },
+  {
+    label: 'BugWord',
+    value: ViewType.BugWord,
   },
 ]

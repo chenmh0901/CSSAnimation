@@ -6,6 +6,7 @@ import MouseFollowAnimation from '@/views/MouseFollow'
 import CardAnimation from '@/views/Card'
 import ImageWallAnimation from '@/views/ImageWall'
 import ClockAnimation from '@/views/Clock'
+import BugWordAnimation from '@/views/BugWord'
 import type { IView } from '@/types/type'
 import { ViewType } from '@/types/type'
 import './style.css'
@@ -21,6 +22,7 @@ export default function Views({ activeView }: { activeView: IView }) {
       {activeView.value === ViewType.Bubble && <BubbleAnimation />}
       {activeView.value === ViewType.TimeLine && <TimeLineAniamtion />}
       {activeView.value === ViewType.WaterLight && <WaterLightAnimation />}
+      {activeView.value === ViewType.BugWord && <BugWordAnimation />}
     </div>
   )
 }
