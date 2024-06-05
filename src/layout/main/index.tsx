@@ -1,10 +1,10 @@
 import CardHero from './hero'
 import List from './list'
 import Views from '@/layout/main/views/index'
-import './style.css'
-import type { IView } from '@/types/type'
-import { ViewType } from '@/types/type'
 import MarkdownViewer from '@/components/mdViewer'
+import { ViewType } from '@/types/view'
+import type { IView } from '@/types/view'
+import './style.css'
 
 function Content({ activeView, setActiveView }: { activeView: IView, setActiveView: (view: IView) => void }) {
   if (activeView.value === ViewType.List) {

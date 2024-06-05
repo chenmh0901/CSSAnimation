@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Header from './header/index'
 import Main from './main'
-import type { IView } from '@/types/type'
-import { viewList } from '@/types/type'
+import type { IView } from '@/types/view'
+import { viewList } from '@/types/view'
 
 function Layout() {
   const [activeView, setActiveView] = useState<IView>(viewList[0])

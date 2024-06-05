@@ -7,8 +7,8 @@ import CardAnimation from '@/views/Card'
 import ImageWallAnimation from '@/views/ImageWall'
 import ClockAnimation from '@/views/Clock'
 import BugWordAnimation from '@/views/BugWord'
-import type { IView } from '@/types/type'
-import { ViewType } from '@/types/type'
+import type { IView } from '@/types/view'
+import { ViewType } from '@/types/view'
 import './style.css'
 
 export default function Views({ activeView }: { activeView: IView }) {

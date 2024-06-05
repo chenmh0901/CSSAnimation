@@ -1,5 +1,5 @@
-import type { IView } from '@/types/type'
-import { ViewType } from '@/types/type'
+import type { IView } from '@/types/view'
+import { ViewType } from '@/types/view'
 import Card from '@/components/card'
 import './style.css'
 

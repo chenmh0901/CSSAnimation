@@ -1,17 +1,29 @@
 import ReactMarkdown from 'react-markdown'
-import { useEffect, useState } from 'react'
 import remarkGfm from 'remark-gfm'
-import 'github-markdown-css/github-markdown-light.css'
+import { useEffect, useState } from 'react'
+import { useHttp } from '@/utils/http'
+import type { IHttpOptions } from '@/utils/http'
+import type { IMarkdownResponse } from '@/types/md'
 import './style.css'
+import 'github-markdown-css/github-markdown-light.css'
 
 export default function MarkdownViewer({ label }: { label: string }) {
   const [post, setPost] = useState('')
-
+  const fetchMd = async () => {
+    try {
+      const options: IHttpOptions<any> = {
+        path: `notes/${label}.md`,
+        method: 'GET',
+      }
+      const { data } = await useHttp<IMarkdownResponse>(options)
+      setPost(String(data))
+    }
+    catch (e) {
+      console.error(e)
+    }
+  }
   useEffect(() => {
-    const path = `../../../notes/${label}.md`
-    fetch(path)
-      .then(res => res.text())
-      .then(text => setPost(text))
+    fetchMd()
   }, [])
   return (
     <div className="card-hero">
