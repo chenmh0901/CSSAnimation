@@ -21,6 +21,15 @@ jobs:
     - name: Build
       run: pnpm install && pnpm build
 
+    - name: Clear dist
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.TG_HOST }}
+        username: ${{ secrets.TG_USER }}
+        password: ${{ secrets.TG_PASS }}
+        script: |
+          rm -rf /home/ubuntu/niniix/cssanimation/*
+
     - name: Deploy
       uses: cross-the-world/scp-pipeline@master
       env:
