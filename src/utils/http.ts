@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-const baseURL = import.meta.env.VITE_BASE_URL
-
 export interface IHttpOptions<T extends IRequestBody> {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE'
   path: string
@@ -11,6 +9,8 @@ export interface IHttpOptions<T extends IRequestBody> {
 interface IRequestBody {
   [key: string]: any
 }
+
+const baseURL = import.meta.env.VITE_BASE_URL
 
 export async function useHttp<R extends IRequestBody>(options: IHttpOptions<IRequestBody>) {
   const config = {
