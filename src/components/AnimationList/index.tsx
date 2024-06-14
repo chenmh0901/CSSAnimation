@@ -7,6 +7,7 @@ function List({ onViewClick }: { onViewClick: (view: IView) => void }) {
   return (
     <div className="list">
       <AnimationCard title="ClockAnimation" content="这是一个酷炫的闹钟展示动画" onClick={() => onViewClick({ label: 'Clock', value: ViewType.Clock })} />
+      <AnimationCard title="Calendar" content="这是一个自己设计的日期选择器" onClick={() => onViewClick({ label: 'Calendar', value: ViewType.Calendar })} />
       <AnimationCard title="ImageWallAnimation" content="这是一个好看的照片墙展示动画" onClick={() => onViewClick({ label: 'Image', value: ViewType.Image })} />
       <AnimationCard title="AnimationCardAnimation" content="这是一个好看的卡牌选择动画" onClick={() => onViewClick({ label: 'Card', value: ViewType.Card })} />
       <AnimationCard title="CheckOnAnimation" content="这是一个好看的完成打勾进度动画" onClick={() => onViewClick({ label: 'CheckOn', value: ViewType.CheckOn })} />

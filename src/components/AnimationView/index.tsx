@@ -7,6 +7,7 @@ import CardAnimation from '@/views/Card'
 import ImageWallAnimation from '@/views/ImageWall'
 import ClockAnimation from '@/views/Clock'
 import BugWordAnimation from '@/views/BugWord'
+import Calendar from '@/views/Calendar'
 import type { IView } from '@/types/view'
 import { ViewType } from '@/types/view'
 import './style.css'
@@ -23,6 +24,14 @@ export default function Views({ activeView }: { activeView: IView }) {
       {activeView.value === ViewType.TimeLine && <TimeLineAniamtion />}
       {activeView.value === ViewType.WaterLight && <WaterLightAnimation />}
       {activeView.value === ViewType.BugWord && <BugWordAnimation />}
+      {activeView.value === ViewType.Calendar && (
+        <Calendar
+          value={new Date()}
+          onChange={(date: Date) => {
+            alert(date.toLocaleDateString())
+          }}
+        />
+      )}
     </div>
   )
 }

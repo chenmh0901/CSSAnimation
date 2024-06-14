@@ -9,6 +9,7 @@ export enum ViewType {
   TimeLine = 'TimeLine',
   WaterLight = 'WaterLight',
   BugWord = 'BugWord',
+  Calendar = 'Calendar',
 }
 
 export interface IView {
@@ -52,5 +53,9 @@ export const viewList: IView[] = [
   {
     label: 'BugWord',
     value: ViewType.BugWord,
+  },
+  {
+    label: 'Calendar',
+    value: ViewType.Calendar,
   },
 ]
