@@ -1,5 +1,4 @@
 export enum ViewType {
-  List = 'List',
   Clock = 'Clock',
   Image = 'Image',
   Card = 'Card',
@@ -18,10 +17,6 @@ export interface IView {
 }
 
 export const viewList: IView[] = [
-  {
-    label: 'List',
-    value: ViewType.List,
-  },
   {
     label: 'Clock',
     value: ViewType.Clock,

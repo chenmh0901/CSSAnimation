@@ -1,37 +1,13 @@
-import WaterLightAnimation from '@/views/WaterLight'
-import TimeLineAniamtion from '@/views/TimeLine'
-import BubbleAnimation from '@/views/Bubble'
-import CheckOnAnimation from '@/views/CheckOn'
-import MouseFollowAnimation from '@/views/MouseFollow'
-import CardAnimation from '@/views/Card'
-import ImageWallAnimation from '@/views/ImageWall'
-import ClockAnimation from '@/views/Clock'
-import BugWordAnimation from '@/views/BugWord'
-import Calendar from '@/views/Calendar'
+import { VIEW_COMPONENTS } from './type'
 import type { IView } from '@/types/view'
 import { ViewType } from '@/types/view'
 import './style.css'
 
 export default function Views({ activeView }: { activeView: IView }) {
+  const ActiveComponent = VIEW_COMPONENTS[activeView.value]
   return (
     <div className="views">
-      {activeView.value === ViewType.Clock && <ClockAnimation />}
-      {activeView.value === ViewType.Image && <ImageWallAnimation />}
-      {activeView.value === ViewType.Card && <CardAnimation />}
-      {activeView.value === ViewType.MouseFollow && <MouseFollowAnimation />}
-      {activeView.value === ViewType.CheckOn && <CheckOnAnimation />}
-      {activeView.value === ViewType.Bubble && <BubbleAnimation />}
-      {activeView.value === ViewType.TimeLine && <TimeLineAniamtion />}
-      {activeView.value === ViewType.WaterLight && <WaterLightAnimation />}
-      {activeView.value === ViewType.BugWord && <BugWordAnimation />}
-      {activeView.value === ViewType.Calendar && (
-        <Calendar
-          value={new Date()}
-          onChange={(date: Date) => {
-            alert(date.toLocaleDateString())
-          }}
-        />
-      )}
+      <ActiveComponent />
     </div>
   )
 }
