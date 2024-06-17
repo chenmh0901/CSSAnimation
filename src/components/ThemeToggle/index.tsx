@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { type ThemeMode, getBrowserDefaultTheme, getLocalTheme, setLocalTheme } from '@/utils/theme'
+import { ThemeMode, getBrowserDefaultTheme, getLocalTheme, setLocalTheme } from '@/utils/theme'
 
 export default function ThemeToggle() {
   // 初始化主题状态
@@ -10,7 +10,7 @@ export default function ThemeToggle() {
   }
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light' // 根据 checkbox 的状态决定主题
+    const newTheme: ThemeMode = theme === ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light
     setDocumentTheme(newTheme)
     setLocalTheme(newTheme)
     setTheme(newTheme)
