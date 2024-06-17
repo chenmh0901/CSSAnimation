@@ -1,3 +1,4 @@
+import ThemeToggle from '../ThemeToggle'
 import type { IView } from '@/types/view'
 import { ViewType } from '@/types/view'
 
@@ -9,6 +10,7 @@ function header({ setActiveView }: { setActiveView: (view: IView) => void }) {
         <a className="btn btn-ghost text-2xl" onClick={() => setActiveView({ label: 'List', value: ViewType.List })}>CSSAnimation Gallery</a>
       </div>
       <div className="navbar-end">
+        <ThemeToggle />
       </div>
     </div>
   )
