@@ -3,7 +3,7 @@ import { ThemeMode, getBrowserDefaultTheme, getLocalTheme, setLocalTheme } from 
 
 export default function ThemeToggle() {
   // 初始化主题状态
-  const [theme, setTheme] = useState<ThemeMode>(() => getLocalTheme('theme') || getBrowserDefaultTheme())
+  const [theme, setTheme] = useState<ThemeMode>(() => getLocalTheme() || getBrowserDefaultTheme())
 
   const setDocumentTheme = (theme: ThemeMode) => {
     document.documentElement.setAttribute('data-theme', theme)
