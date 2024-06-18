@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import Navigator from '../components/Navigator/index'
 import Main from './main'
-import type { IView } from '@/types/view'
-import { viewList } from '@/types/view'
+import { ViewModes } from '@/types/view'
 
 function Layout() {
-  const [activeView, setActiveView] = useState<IView>(viewList[0])
+  const [viewMode, setViewMode] = useState(ViewModes.ViewList)
   return (
     <>
-      <Navigator setActiveView={setActiveView} />
-      <Main activeView={activeView} setActiveView={setActiveView} />
+      <Navigator setViewMode={setViewMode} />
+      <Main viewMode={viewMode} setViewMode={setViewMode} />
     </>
   )
 }

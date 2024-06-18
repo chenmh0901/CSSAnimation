@@ -1,13 +1,11 @@
 import ThemeToggle from '../ThemeToggle'
-import type { IView } from '@/types/view'
-import { ViewType } from '@/types/view'
 
-function header({ setActiveView }: { setActiveView: (view: IView) => void }) {
+function header({ setViewMode }: { setViewMode: (mode: ViewMode) => void }) {
   return (
     <div className="navbar ">
       <div className="navbar-start" />
       <div className="navbar-center">
-        <a className="btn btn-ghost text-2xl" onClick={() => setActiveView({ label: 'List', value: ViewType.List })}>CSSAnimation Gallery</a>
+        <a className="btn btn-ghost text-2xl" onClick={() => setViewMode('ViewList')}>CSSAnimation Gallery</a>
       </div>
       <div className="navbar-end">
         <ThemeToggle />
