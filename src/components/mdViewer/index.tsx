@@ -12,7 +12,7 @@ export default function MarkdownViewer({ label }: { label: string }) {
   const fetchMd = async () => {
     try {
       const options: IHttpOptions<any> = {
-        path: `article/${label}`,
+        path: `notes/${label}`,
         method: 'GET',
       }
       const { data } = await useHttp<IMarkdownResponse>(options)
